@@ -365,19 +365,19 @@ var bot = window.bot = (function() {
             // These are the bot's default options
             // If you wish to customise these, use
             // customBotOptions above
-            targetFps: 30,
+            targetFps: 45,
             arcSize: Math.PI / 8,
             radiusMult: 10,
-            foodAccelSize: 60,
-            foodAccelAngle: Math.PI / 3,
+            foodAccelSize: 45,
+            foodAccelAngle: Math.PI / 2.8,
             foodFrames: 4,
             foodRoundSize: 5,
             foodRoundAngle: Math.PI / 8,
             foodSmallSize: 10,
             rearHeadAngle: 3 * Math.PI / 4,
             rearHeadDir: Math.PI / 2,
-            radiusApproachSize: 5,
-            radiusAvoidSize: 25
+            radiusApproachSize: 3,
+            radiusAvoidSize: 30
         },
         MID_X: 0,
         MID_Y: 0,
