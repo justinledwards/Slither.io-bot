@@ -1460,3 +1460,23 @@ var userInterface = window.userInterface = (function() {
     // Start!
     userInterface.oefTimer();
 })();
+
+
+bot.opt["targetFps"] = 45
+bot.opt["foodAccelSize"] = 45
+bot.opt["foodAccelAngle"] = Math.PI / 2.8
+bot.opt["radiusMult"] = 9
+bot.opt["radiusApproachSize"] = 8
+bot.opt["radiusAvoidSize"] = 8
+
+crazy = false;
+
+function randAccel() { if ( crazy ) { if ( bot.defaultAccel == 1 && bot.lookForFood == false ) { bot.defaultAccel = 0 } else { bot.defaultAccel = Math.floor(Math.random() * 2) }} else { bot.defaultAccel = 0}}
+
+(function loop() {
+    var rand = Math.round(Math.random() * (1700 - 500));
+    setTimeout(function() {
+            randAccel();
+            loop();  
+    }, rand);
+}());
